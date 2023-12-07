@@ -3,10 +3,11 @@
 
 
 <head>
-    <link rel="stylesheet" crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
-    
+    <link rel="stylesheet" crossorigin="anonymous"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
     <style>
         #lightText {
@@ -15,21 +16,14 @@
             background-color: #122440;
         }
 
-        main {
-            align: center;
-            padding-left: 15vw;
-            padding-right: 15vw;
-        }
-
         form {
-            text-align: center;
-
+            max-width: 250px;
+            margin: auto;
         }
 
-        #submitButton {
-            padding-left: 100%;
+        #submitButton input {
+            float: right;
         }
-
     </style>
 </head>
 
@@ -41,30 +35,29 @@
     <main>
         <!-- In the form, the action attiute, which is responsible of processing the submission request, is set to 'localhost:8000' instead of firing a script stored on an external server to process input date; unless the localhost port has a script for processing the input data, users' input won't be processd or stored. -->
         <!-- TODO describe why this form will or will not work on the internet -->
-        <div id="formWrapper">
-            <form action="localhost:8000" method="post">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input class="form-control" id="name" type="text" name="Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input class="form-control" id="email" type="email" name="Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="name">Subject</label>
-                    <input class="form-control" id="subject" type="text" name="Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" name="Message" required></textarea>
-                </div>
-                <div id="submitButton">
-                    <input class="btn btn-primary" type="submit" value="Submit" />
-                </div>
-        </div>
+
+        <form action="localhost:8000" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" id="name" type="text" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" id="email" type="email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Subject</label>
+                <input class="form-control" id="subject" type="text" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="Message" required></textarea>
+            </div>
+            <div id="submitButton">
+                &nbsp; <input class="btn btn-primary" type="submit" value="Submit" />
+            </div>
+            </div>
         </form>
-        </div>
     </main>
     <footer>
         <p id="lightText">Jayden K.</p>
