@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
     <h1>Tim Berners Lee</h1>
+    <script>
+        class DateElement extends HTMLElement {
+            connectedCallback(){
+                this.innerHTML = new Date().getFullYear();
+            }
+        }
+        customElements.define("x-fullyear", DateElement);
+    </script>
 </head>
 
 <body>
@@ -19,6 +27,9 @@
             <dd>Fundamental Protocols & Algorithms such as Hypertext Transfer Protocol (HTTPS/HTTP) and Hypertext Markup Language allow content to be delivered in a consistent manner to end users regardless of the device or software they use to visit the content.</dd>
         </dl>
     </main>
+    <footer>
+            <p>&copy; Jayden <x-fullyear></x-fullyear></p>
+    </footer>
 </body>
 
 </html>
