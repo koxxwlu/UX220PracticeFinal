@@ -4,7 +4,7 @@
 </head>
 
 <body>
-    <h1>There are <x-daysleft></x-daysleft> day(sss) left until PI Day (<x-piday></x-piday>).</h1>
+    <h1>There are <x-daysleft></x-daysleft> day(s) left until PI Day (<x-piday></x-piday>).</h1>
 </body>
 <script>
     class DaysLeft extends HTMLElement{
@@ -14,7 +14,7 @@
             let nSeconds = 1000*60*60*24;
             let nDaysLeft = Math.ceil((nPiDay.getTime()-today.getTime())/(nSeconds));
             console.log(nDaysLeft); //logs the value we are looking for in our heading
-            // put your "secret sauce here to get this in to the document
+            this.innerHTML = 365-(-1)*nDaysLeft; // put your "secret sauce here to get this in to the document
         }
     }
 
